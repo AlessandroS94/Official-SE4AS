@@ -28,6 +28,8 @@ $ minikube dashboard
 
 At the and do this command:
 ```
-$ brew install minikube
+$ git clone https://github.com/AlessandroS94/Official-SE4AS.git
+$ cd Official-SE4AS
+
 ```
 
