@@ -30,6 +30,26 @@ At the and do this command:
 ```
 $ git clone https://github.com/AlessandroS94/Official-SE4AS.git
 $ cd Official-SE4AS
+cd Container-Code
+
+$ cd Mosquitto-Broker && kubectl apply -f Mosquitto2 && cd ..
+
+$ cd Sensor && kubectl apply -f deployment.yaml && cd ..
+
+$ cd Planning && kubectl apply -f deployment.yaml && cd ..
+
+$ cd Management && kubectl apply -f deployment.yaml && cd ..
+
+$ cd Executing && kubectl apply -f deployment.yaml && cd ..
+
+cd Analyzing && kubectl apply -f deployment.yaml && cd ..
+
+After deployed all deployment run this command 
+
+$ kubectl port-forward service/mosquitto 27000:9001
+
+$ minikube service angular-service
 
 ```
 
+With last command you can connect with the angular-dashboard to console
