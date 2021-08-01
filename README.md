@@ -30,7 +30,7 @@ At the and do this command:
 ```
 $ git clone https://github.com/AlessandroS94/Official-SE4AS.git
 $ cd Official-SE4AS
-cd Container-Code
+$ cd Container-Code
 
 $ cd Mosquitto-Broker && kubectl apply -f Mosquitto2 && cd ..
 
