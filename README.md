@@ -1,3 +1,6 @@
+<img src="https://github.com/kubernetes/kubernetes/raw/master/logo/logo.png" width="100">
+
+----
 # Official-SE4AS
 SE4AS Project
 ## Table of contents
@@ -12,7 +15,7 @@ This project is realized for the exam.
 Project is created with:
 * Kubernetes
 * Docker
-* MInikube
+* Minikube
 	
 ## Setup
 To run this project, install it locally using kubernetes and minikube

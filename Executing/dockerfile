@@ -1,0 +1,8 @@
+FROM python:latest
+RUN  mkdir -p /app
+COPY ./src/executing.csv ./
+COPY ./src/settings.yaml ./
+COPY ./src/ /app/
+RUN pip install -r ./app/requirement.txt
+EXPOSE 5000
+CMD [ "python", "./app/executing.py" ]

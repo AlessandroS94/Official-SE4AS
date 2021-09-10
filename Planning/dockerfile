@@ -1,0 +1,13 @@
+FROM python:latest
+RUN  mkdir -p /app
+COPY ./src/BLANKET-prediction.csv ./
+COPY ./src/BLANKET-sensor.csv ./
+COPY ./src/CONTROL-MAX-temperature.csv ./
+COPY ./src/CONTROL-MIN-temperature.csv ./
+COPY ./src/HR-sensor.csv ./
+COPY ./src/TEMP-sensor.csv ./
+COPY ./src/settings.yaml ./
+COPY ./src/ /app/
+RUN pip install -r ./app/requirement.txt
+EXPOSE 5000
+CMD [ "python", "./app/planning.py" ]

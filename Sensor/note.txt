@@ -1,0 +1,27 @@
+Per la build
+docker build -t sensor-demo .
+
+Per run
+docker run -it sensor-demo sensor.py
+
+
+Lista
+docker images
+
+TAG
+docker tag 14a9f0ebbf02 your_docker_user/your_docker_repo/spring-boot-docker:v1
+
+Push
+docker push your_docker_user/spring-boot-docker
+
+Mosquitto  /usr/local/opt/mosquitto/sbin/mosquitto
+
+conf /usr/local/opt/mosquitto/etc/mosquitto
+
+Lunch with conf
+
+/usr/local/opt/mosquitto/sbin/mosquitto -c /usr/local/opt/mosquitto/etc/mosquitto/mosquitto.conf
+
+
+apply service minikube service (nome del servizio)
+es minikube service angular-service

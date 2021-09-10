@@ -1,0 +1,4 @@
+---
+mosquittoDNS: "mosquitto"
+mosquittoPORT: 1883
+

@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: planningdeploy
+  labels:
+    app: planningapp
+spec:
+  selector:
+    matchLabels:
+      app: planningapp
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: planningapp
+    spec:
+      containers:
+      - name: planningapp
+        image: 03021994/planning:v3
+        command: ["python", "./app/planning.py"]
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8082
+
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "50m"
+          limits:
+            memory: "64Mi"
+            cpu: "60m"

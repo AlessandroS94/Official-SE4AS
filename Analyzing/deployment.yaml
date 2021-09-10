@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: analyzingdeploy
+  labels:
+    app: analyzingapp
+spec:
+  selector:
+    matchLabels:
+      app: analyzingapp
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: analyzingapp
+    spec:
+      containers:
+      - name: analyzingapp
+        image: 03021994/analyzing:v3
+        command: ["python", "./app/analyzing.py"]
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+
+        resources:
+          requests:
+            memory: "900Mi"
+            cpu: "1000m"
+          limits:
+            memory: "1100Mi"
+            cpu: "2000m"
