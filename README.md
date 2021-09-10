@@ -22,15 +22,15 @@ This process is tested for MacOS:
 2. Install minikube:
 ```
 $ brew install minikube
-$ minikube start
+$ minikube start --memory 2048
 $ minikube dashboard
 ```
 
 At the and do this command:
 ```
 $ git clone https://github.com/AlessandroS94/Official-SE4AS.git
+
 $ cd Official-SE4AS
-$ cd Container-Code
 
 $ cd Mosquitto-Broker && kubectl apply -f Mosquitto2 && cd ..
 
