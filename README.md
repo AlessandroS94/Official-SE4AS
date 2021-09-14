@@ -25,6 +25,7 @@ This process is tested for MacOS:
 2. Install minikube:
 ```
 $ brew install minikube
+$ minikube start 
 $ minikube start --memory 2048
 $ minikube dashboard
 ```
